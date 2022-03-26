@@ -1,13 +1,6 @@
 # kgu_rental
+<img width="428" alt="스크린샷 2022-03-26 오후 1 52 36" src="https://user-images.githubusercontent.com/58041212/160225223-bd93e3d1-5a52-4076-8ef7-ba992969177e.png">
 
-<pre>
-<type>(<scope>): <subject>          -- 헤더
-<BLANK LINE>
-<body>                              -- 본문
-<BLANK LINE>
-<footer>                            -- 바닥글
-</pre>
-  
   ### <type>
 
 어떤 의도로 커밋했는지를 type에 명시합니다.
