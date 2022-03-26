@@ -1,12 +1,12 @@
 # kgu_rental
 
-<xmp>
+<pre>
 <type>(<scope>): <subject>          -- 헤더
 <BLANK LINE>
 <body>                              -- 본문
 <BLANK LINE>
 <footer>                            -- 바닥글
-</xmp>
+</pre>
   
   ### <type>
 
