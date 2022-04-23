@@ -14,15 +14,16 @@ public class ItemManager {
 
 
     @Id
+    @Column(name="itemManager_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @ManyToOne
     @JoinColumn(name="item_id")
     private Item item;
 
-    @Id
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

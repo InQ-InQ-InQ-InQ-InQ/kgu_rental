@@ -13,13 +13,16 @@ public class Item {
 
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Column(name="item_id")
+    @Column(name="item_id")
     private Long Id;
     private String itemName;
     private Long itemCount;
     private Long term;
 
-    @OneToMany(mappedBy="item")
-    private List<ItemManager> itemManagers = new ArrayList<>();
+    @OneToMany(mappedBy = "item")
+    private List<ItemManager> itemManager=new ArrayList<>();
+
+
+
 
 }

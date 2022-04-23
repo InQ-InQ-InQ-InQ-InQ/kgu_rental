@@ -3,10 +3,7 @@ package team3.kgurental.model.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +12,7 @@ import java.util.List;
 public class User {
 
     @Id@GeneratedValue
-
+    @Column(name="user_id")
     private Long userId;
 
     private  String userPw;
@@ -26,6 +23,7 @@ public class User {
 
     @OneToMany(mappedBy="user")
     private List<ItemManager> itemManagers = new ArrayList<>();
+
 
 
 
