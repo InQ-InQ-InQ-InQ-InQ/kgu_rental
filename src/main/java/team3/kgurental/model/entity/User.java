@@ -24,6 +24,8 @@ public class User {
     @OneToMany(mappedBy="user")
     private List<ItemManager> itemManagers = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user")
+    private List<Reservation> reservations=new ArrayList<>();
 
 
 
