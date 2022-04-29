@@ -11,15 +11,15 @@ import java.util.List;
 @Getter @Setter
 public class User {
 
-    @Id@GeneratedValue
-    @Column(name="user_id")
-    private Long userId;
+    @Id
 
-    private  String userPw;
+    private String userId;
 
-    private  String userName;
+    private  String password;
 
-    private  Long userPhoneNumber;
+    private  String name;
+
+    private  String userPhoneNumber;
 
     @OneToMany(mappedBy="user")
     private List<ItemManager> itemManagers = new ArrayList<>();
