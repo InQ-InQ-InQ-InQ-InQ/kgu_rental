@@ -12,12 +12,11 @@ import java.util.List;
 @Getter @Setter
 public class Reservation {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reservationId;
+    @Column(name = "reservationId")
+    private Long Id;
 
-    private Date reservationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="item_id")
@@ -26,4 +25,5 @@ public class Reservation {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
 }
