@@ -17,7 +17,7 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long reservationId;
 
-    private String reservationDate;
+    private Date reservationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="item_id")
