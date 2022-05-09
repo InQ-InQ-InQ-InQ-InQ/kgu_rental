@@ -1,4 +1,5 @@
 let login = document.getElementById('login');
+let logout = document.getElementById('logout');
 let user = {
 
 }
@@ -15,3 +16,7 @@ login.addEventListener('click', () => {
         console.log('아이디 또는 암호가 올바르지 않습니다.');
     }
 });
+// 로그아웃
+logout.addEventListener('click', () => {
+    alert('로그아웃 되었습니다.');
+})
