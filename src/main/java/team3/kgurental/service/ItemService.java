@@ -20,4 +20,5 @@ public class ItemService {
     public List<Item> allItemView() {return itemRepository.findAll();}
 
     public void itemDelete(Long Id) {itemRepository.deleteById(Id);}
+
 }
