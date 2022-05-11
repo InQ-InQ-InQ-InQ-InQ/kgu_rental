@@ -21,11 +21,16 @@ public class UserRepository {
         return em.find(User.class, userId);
     }
 
+    public List<User> findAll() {   //전체조회
+        return em.createQuery("select m from User m", User.class)
+                .getResultList();
+    }
 
     public List<User> findByLoginId(String userId) {          //아이디로 회원찾기
         return em.createQuery("select m from User m where m.userId = :userId", User.class)
                 .setParameter("userId", userId)
                 .getResultList();
     }
+
 
 }
