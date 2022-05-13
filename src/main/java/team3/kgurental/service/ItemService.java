@@ -20,12 +20,10 @@ public class ItemService {
 
     public void itemDelete(Long Id) {itemRepository.deleteById(Id);}
 
-    @Transactional
-    public void itemModify(Item item,Long id){
-        Item update = itemRepository.findItemById(id);
-        update.setItemName(item.getItemName());
+    //아이템 개수 수정
+    public void itemCountModify(Item item, Long Id) {
+        Item update = itemRepository.findById(Id)
+                .orElseThrow(() -> new RuntimeException());
         update.setItemCount(item.getItemCount());
-        update.setTerm(item.getTerm());
-        itemRepository.save(update);
     }
 }

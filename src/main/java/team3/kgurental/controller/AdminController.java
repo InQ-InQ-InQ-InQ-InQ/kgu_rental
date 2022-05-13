@@ -3,8 +3,12 @@ package team3.kgurental.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import team3.kgurental.model.entity.Item;
 import team3.kgurental.model.entity.User;
+import team3.kgurental.service.ItemService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -32,6 +36,13 @@ public class AdminController {
         return "adminPage";
     }
 
+    private final ItemService itemService;
+
+    @PostMapping("/itemDelete")
+    public String itemDeletePOST (Item item){
+        itemService.itemDelete(item.getId());
+        return "redirect:/admin";
+    }
 
 
 }
