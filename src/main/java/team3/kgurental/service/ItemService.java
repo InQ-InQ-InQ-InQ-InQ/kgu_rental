@@ -23,9 +23,9 @@ public class ItemService {
     //아이템 삭제
     public void itemDelete(Long Id) {itemRepository.deleteById(Id);}
     //아이템 개수 수정
-    public void itemcountModify(Item item, Long Id) {
-        Item update = itemRepository.findItemById(Id);
-        update.setItemCount(item.getItemCount());
-        itemRepository.save(update);
-    }
+//    public void itemCountModify(Item item, Long Id) {
+//        Item update = itemRepository.findItemById(Id);
+//        update.setItemCount(item.getItemCount());
+//        itemRepository.save(update);
+//    }
 }
