@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+<body>
+<div class="container">
+    <div>
+        <form  th:object="${itemRegisterForm}" method="post" action="/register">
+            <div >
+                <label>품목 이름 </label>
+                <input type="text" th:field="*{itemName}"   placeholder="등록 할 품목을 입력하세요.">
+            </div>
+
+            <div>
+                <label >품목 수량 </label>
+                <input type="number" th:field="*{itemCount}" >
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br/>
+    </div >
+</div> <!-- /container -->
+</body>
+</html>
