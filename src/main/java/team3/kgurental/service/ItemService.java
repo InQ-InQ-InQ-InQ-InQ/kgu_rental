@@ -9,7 +9,6 @@ import team3.kgurental.repository.ItemRepository;
 import java.util.List;
 
 @Service
-@Transactional
 @RequiredArgsConstructor
 public class ItemService {
 
@@ -21,4 +20,12 @@ public class ItemService {
 
     public void itemDelete(Long Id) {itemRepository.deleteById(Id);}
 
+    @Transactional
+    public void itemModify(Item item,Long id){
+        Item update = itemRepository.findItemById(id);
+        update.setItemName(item.getItemName());
+        update.setItemCount(item.getItemCount());
+        update.setTerm(item.getTerm());
+        itemRepository.save(update);
+    }
 }
