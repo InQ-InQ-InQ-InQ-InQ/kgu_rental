@@ -20,9 +20,6 @@ public class Item {
 
 
     @OneToMany(mappedBy = "item")
-    private List<ItemManager> itemManager=new ArrayList<>();
-
-    @OneToMany(mappedBy = "item")
     private List<Reservation> reservation=new ArrayList<>();
 
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 타임리프를 사용하기 위한 태그 선언 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- 내부 css -->
+    <style>
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+    </style>
+
+    <!-- 내부 js -->
+    <script>
+        window.onload = function() {
+            console.log("");
+            console.log("[window onload] : [start]");
+            console.log("");
+        };
+    </script>
+
+</head>
+
+<body>
+
+<!-- 테이블 선언 실시 -->
+<table>
+
+    <thead>
+    <tr>
+        <th>대여번호</th>
+        <th>대여품목</th>
+        <th>반납기한</th>
+        <th>예약자명</th>
+        <th>예약자번호</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- tr th:each : 행 반복문을 수행하겠다는 의미입니다 [여러 데이터 출력] -->
+    <tr th:each=" Reservation : ${reservations}">
+        <td><span th:text="${Reservation.getId()}"></span></td>
+        <td><span th:text="${Reservation.getItem().getItemName()}"></span></td>
+        <td><span th:text="${Reservation.getReservationDate()}"></span></td>
+        <td><span th:text="${Reservation.getUser().getName()}"></span></td>
+        <td><span th:text="${Reservation.getUser().getUserPhoneNumber()}"></span></td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+
+</html>
