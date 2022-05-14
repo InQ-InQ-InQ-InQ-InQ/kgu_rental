@@ -93,5 +93,18 @@ public class UserReservationController {
     }
 
     //사용자 대여 취소
+    @GetMapping("/reservationDelete")
+    public String reservationDelete(HttpServletRequest request){
+        HttpSession session=request.getSession();
+        User loginUser = (User) session.getAttribute(SessionConstants.LOGIN_USER);
+        List<Reservation> reservations = reservationService.reservationFindByUser(loginUser);
+        for(Reservation deleteReservation:reservations){
+            deleteReservation.getItem().setItemCount(deleteReservation.getItem().getItemCount()+1);
+            reservationService.reservationDelete(deleteReservation);
+        }
 
+
+
+        return "redirect:/";
+    }
 }
