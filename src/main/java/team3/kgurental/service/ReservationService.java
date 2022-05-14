@@ -25,11 +25,11 @@ public class ReservationService {
     public List<Reservation> reservationList(){return reservationRepository.findAll();}
 
     //사용자 대여 조회
-    public Reservation reservationFindByUser(User user){
+    public List<Reservation> reservationFindByUser(User user){
         return reservationRepository.reservationFind(user);
     }
 
-    //사용자 대여 삭제
+    //사용자 대여 취소
     public void reservationDelete(Reservation reservation){
         reservationRepository.delete(reservation);
     }

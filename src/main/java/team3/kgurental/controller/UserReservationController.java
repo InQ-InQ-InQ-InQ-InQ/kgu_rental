@@ -68,7 +68,7 @@ public class UserReservationController {
         }
 
         Reservation reservation=new Reservation();
-        reservation.setReservationDate(date+"18시 까지");
+        reservation.setReservationDate(date+", 18시 까지");
         reservation.setUser(loginUser);
         reservation.setItem(reservationItem);
 
@@ -79,5 +79,19 @@ public class UserReservationController {
 
         return "redirect:/";
     }
+
+    //사용자 조회
+    @GetMapping("/reservationFind")
+    public String reservationFind(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession();
+        User loginUser = (User) session.getAttribute(SessionConstants.LOGIN_USER);
+        List<Reservation> byLoginId = reservationService.reservationFindByUser(loginUser);
+
+        model.addAttribute("reservationList", byLoginId);
+
+        return "userListUp";
+    }
+
+    //사용자 대여 취소
 
 }
