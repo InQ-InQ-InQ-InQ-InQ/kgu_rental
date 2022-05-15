@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles_admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet"> -->
+
+</head>
+
+<body>
+    <div class="container-fluid d-flex align-items-stretch">
+        <nav id="sidebar" class="">
+            <h1><a href="index.html" class="logo">KGU Rental</a></h1>
+            <ul class="list-unstyled components mb-5">
+                <!-- <li class="active">
+                    <a href="#"><span class="fa fa-home mx-3"></span> Home</a>
+                </li> -->
+                <li class="active">
+                    <a href="#"><span class="fa fa-sticky-note mx-3"></span> 물품 관리</a>
+                </li>
+                <li class="active">
+                    <a href="#"><span class="fa fa-user mx-3"></span> 예약 관리</a>
+                </li>
+                <!-- <li>
+                    <a href="#"><span class="fa fa-paper-plane mx-3"></span> Information</a>
+                </li> -->
+            </ul>
+        </nav>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper" class="container-fluid">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-4">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid px-4">
+                <p></p>
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800">물품 관리</h1>
+                <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                    For more information about DataTables, please visit the <a target="_blank"
+                        href="https://datatables.net">official DataTables documentation</a>.</p>
+
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">전체 물품</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table table-bordered dataTable" id="dataTable" width="100%"
+                                            cellspacing="0" role="grid" aria-describedby="dataTable_info"
+                                            style="width: 100%;">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting sorting_asc" tabindex="0"
+                                                        aria-controls="dataTable" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="Name: activate to sort column descending"
+                                                        style="width: 176px;">Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Position: activate to sort column ascending"
+                                                        style="width: 269px;">Position</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Office: activate to sort column ascending"
+                                                        style="width: 126px;">Office</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Age: activate to sort column ascending"
+                                                        style="width: 57px;">Age</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 119px;">Start date</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Salary: activate to sort column ascending"
+                                                        style="width: 106px;">Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">Airi Satou</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>33</td>
+                                                    <td>2008/11/28</td>
+                                                    <td>$162,700</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">Angelica Ramos</td>
+                                                    <td>Chief Executive Officer (CEO)</td>
+                                                    <td>London</td>
+                                                    <td>47</td>
+                                                    <td>2009/10/09</td>
+                                                    <td>$1,200,000</td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">Ashton Cox</td>
+                                                    <td>Junior Technical Author</td>
+                                                    <td>San Francisco</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12</td>
+                                                    <td>$86,000</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">Bradley Greer</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>London</td>
+                                                    <td>41</td>
+                                                    <td>2012/10/13</td>
+                                                    <td>$132,000</td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">Brenden Wagner</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>28</td>
+                                                    <td>2011/06/07</td>
+                                                    <td>$206,850</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">Brielle Williamson</td>
+                                                    <td>Integration Specialist</td>
+                                                    <td>New York</td>
+                                                    <td>61</td>
+                                                    <td>2012/12/02</td>
+                                                    <td>$372,000</td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">Bruno Nash</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>London</td>
+                                                    <td>38</td>
+                                                    <td>2011/05/03</td>
+                                                    <td>$163,500</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">Caesar Vance</td>
+                                                    <td>Pre-Sales Support</td>
+                                                    <td>New York</td>
+                                                    <td>21</td>
+                                                    <td>2011/12/12</td>
+                                                    <td>$106,450</td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">Cara Stevens</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>New York</td>
+                                                    <td>46</td>
+                                                    <td>2011/12/06</td>
+                                                    <td>$145,600</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">Cedric Kelly</td>
+                                                    <td>Senior Javascript Developer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>22</td>
+                                                    <td>2012/03/29</td>
+                                                    <td>$145,600</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-light">
+        <div class="container px-4">
+            <p class="mb-5 fs-6 fw-lighter fst-italic text-center">Copyright &copy; kgu rental 2022</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+</body>
+
+</html>
