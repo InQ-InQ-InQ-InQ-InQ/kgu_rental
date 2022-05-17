@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>물품 수정</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="../static/css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container px-4">
+            <a class="navbar-brand" href="./index.html">KGU Rental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#Rent">Reserve</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="py-5">
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- 물품 이미지 및 유의사항 -->
+                <div class="card mt-5 mb-5 mx-5">
+                    <img src="../static/image/soccer_ball.webp" style="height: 300px;">
+                    <div class="card-body pt-5">
+                        <h2 class="card-title">유의사항</h2>
+                        <p class="card-text">- 당일 18시까지 반납해주셔야 합니다. (미반납 시, 물품대여사업 한 달 이용 제한)</p>
+                        <p class="card-text">- 대여 시, 학생회에서 본인 인증 가능한 신분증 또는 운전면허증 보관받습니다.</p>
+                        <p class="card-text">- 모두가 함께 사용하는 공동물품이므로 본인의 물품처럼 소중히 다뤄주시기를 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 정보 수정란 -->
+            <div class="col-lg-7">
+                <section class="col">
+                    <div class="container px-4">
+                        <div class="row gx-4 justify-content-center m-auto">
+                            <div class="row position-static d-block">
+                                <h4 class="mb-3 text-center">물품 수정</h4>
+                                <form class="needs-validation" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6 offset-md-3">
+                                            <label for="item_name" class="form-label">물품 이름</label>
+                                            <input type="text" class="form-control" id="item_name" placeholder="물품 이름"
+                                                value="" required>
+                                        </div>
+                                        <div class="col-md-6 offset-md-3">
+                                            <label for="item_count" class="form-label">수량</label>
+                                            <input type="number" class="form-control" id="item_count" placeholder="수량"
+                                                value="" required>
+                                        </div>
+                                        <div class="col-md-6 offset-md-3">
+                                            <label for="item_image" class="form-label">이미지</label>
+                                            <input type="file" class="form-control" id="item_image" placeholder="이미지"
+                                                value="" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row">
+                                <hr class="my-4 col-md-6 offset-md-3">
+                            </div>
+
+                            <div class="row">
+                                <form method="" action="">
+                                <button class="btn btn-outline-primary btn-lg col-md-6 offset-md-3" type="submit"
+                                    id="item_modify">수정 완료</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-light">
+        <div class="container px-4">
+            <p class="mb-5 fs-6 fw-lighter fst-italic text-center">Copyright &copy; kgu rental 2022</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="./js/item_modify.js"></script>
+</body>
+
+</html>

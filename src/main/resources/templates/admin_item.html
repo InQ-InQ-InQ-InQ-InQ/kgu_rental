@@ -44,11 +44,11 @@
                         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./items_select_date.html">Reserve</a></li>
                             <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
                             <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
                             <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./mypage.html">MyPage</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,14 +58,17 @@
                 <p></p>
                 <!-- Page Heading -->
                 <h1 class="h3 mb-2 text-gray-800">물품 관리</h1>
-                <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                    For more information about DataTables, please visit the <a target="_blank"
-                        href="https://datatables.net">official DataTables documentation</a>.</p>
+                <p class="mb-4"> 물품 관리는 데이터테이블 우측의 물품 수정 / 물품 삭제 버튼을 통해 가능합니다. 생성은 우측 상단의 물품 생성을 이용합니다.</p>
 
-                <!-- DataTales Example -->
+                <!-- DataTales -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">전체 물품</h6>
+                    <div class="card-header py-3 d-inline-block align-items-center">
+                        <div class="">
+                            <h6 class="m-0 font-weight-bold text-primary d-inline-block">전체 물품</h6>
+
+                            <button class="btn btn-outline-primary float-right"><a href="./items_create.html">물품
+                                    생성</a></button>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -81,109 +84,92 @@
                                                         aria-controls="dataTable" rowspan="1" colspan="1"
                                                         aria-sort="ascending"
                                                         aria-label="Name: activate to sort column descending"
-                                                        style="width: 176px;">Name</th>
+                                                        style="width: 67px;">대여 번호</th>
                                                     <th class="sorting" tabindex="0" aria-controls="dataTable"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Position: activate to sort column ascending"
-                                                        style="width: 269px;">Position</th>
+                                                        style="width: 259px;">물품명</th>
                                                     <th class="sorting" tabindex="0" aria-controls="dataTable"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
-                                                        style="width: 126px;">Office</th>
+                                                        style="width: 126px;">물품 수량</th>
                                                     <th class="sorting" tabindex="0" aria-controls="dataTable"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Age: activate to sort column ascending"
-                                                        style="width: 57px;">Age</th>
+                                                        style="width: 219px;">대여가능 기간</th>
                                                     <th class="sorting" tabindex="0" aria-controls="dataTable"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 119px;">Start date</th>
+                                                        style="width: 66px;">물품 수정</th>
                                                     <th class="sorting" tabindex="0" aria-controls="dataTable"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Salary: activate to sort column ascending"
-                                                        style="width: 106px;">Salary</th>
+                                                        style="width: 66px;">물품 삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr class="odd">
-                                                    <td class="sorting_1">Airi Satou</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>33</td>
-                                                    <td>2008/11/28</td>
-                                                    <td>$162,700</td>
+                                                    <td class="sorting_1">1</td>
+                                                    <td>아이폰 충전기</td>
+                                                    <td>10</td>
+                                                    <td>7일</td>
+                                                    <td><button class="btn btn-outline-primary ml-2"
+                                                            aria-label="Close"><a
+                                                                href="./items_modify.html">수정</a></button></td>
+                                                    <td>
+                                                        <form method="" action="">
+                                                            <button type="submit" class="btn btn-outline-danger ml-2"
+                                                                aria-label="Close">삭제</button>
+                                                        </form>
+                                                    </td>
                                                 </tr>
                                                 <tr class="even">
-                                                    <td class="sorting_1">Angelica Ramos</td>
-                                                    <td>Chief Executive Officer (CEO)</td>
-                                                    <td>London</td>
-                                                    <td>47</td>
-                                                    <td>2009/10/09</td>
-                                                    <td>$1,200,000</td>
+                                                    <td class="sorting_1">2</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="odd">
-                                                    <td class="sorting_1">Ashton Cox</td>
-                                                    <td>Junior Technical Author</td>
-                                                    <td>San Francisco</td>
-                                                    <td>66</td>
-                                                    <td>2009/01/12</td>
-                                                    <td>$86,000</td>
+                                                    <td class="sorting_1">3</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="even">
-                                                    <td class="sorting_1">Bradley Greer</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>London</td>
-                                                    <td>41</td>
-                                                    <td>2012/10/13</td>
-                                                    <td>$132,000</td>
+                                                    <td class="sorting_1">4</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="odd">
-                                                    <td class="sorting_1">Brenden Wagner</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>San Francisco</td>
-                                                    <td>28</td>
-                                                    <td>2011/06/07</td>
-                                                    <td>$206,850</td>
+                                                    <td class="sorting_1">5</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="even">
-                                                    <td class="sorting_1">Brielle Williamson</td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>New York</td>
-                                                    <td>61</td>
-                                                    <td>2012/12/02</td>
-                                                    <td>$372,000</td>
+                                                    <td class="sorting_1">6</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="odd">
-                                                    <td class="sorting_1">Bruno Nash</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>London</td>
-                                                    <td>38</td>
-                                                    <td>2011/05/03</td>
-                                                    <td>$163,500</td>
-                                                </tr>
-                                                <tr class="even">
-                                                    <td class="sorting_1">Caesar Vance</td>
-                                                    <td>Pre-Sales Support</td>
-                                                    <td>New York</td>
-                                                    <td>21</td>
-                                                    <td>2011/12/12</td>
-                                                    <td>$106,450</td>
-                                                </tr>
-                                                <tr class="odd">
-                                                    <td class="sorting_1">Cara Stevens</td>
-                                                    <td>Sales Assistant</td>
-                                                    <td>New York</td>
-                                                    <td>46</td>
-                                                    <td>2011/12/06</td>
-                                                    <td>$145,600</td>
-                                                </tr>
-                                                <tr class="even">
-                                                    <td class="sorting_1">Cedric Kelly</td>
-                                                    <td>Senior Javascript Developer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>22</td>
-                                                    <td>2012/03/29</td>
-                                                    <td>$145,600</td>
+                                                    <td class="sorting_1">7</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -204,6 +190,7 @@
     </footer>
     <!-- Bootstrap core JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/admin.item.js"></script>
     <!-- Core theme JS -->
 </body>
 
