@@ -54,7 +54,7 @@ public class LoginController {
 
         if (loginUser.getUserId().equals("admin")){       //관리자 로그인
 
-            return "redirect:/adminPage(만들어야함)";
+            return "redirect:/adminPage";
 
         }
 

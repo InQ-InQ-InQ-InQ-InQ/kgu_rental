@@ -25,7 +25,7 @@ public class ItemRegisterController {
     @PostMapping("/register")
     public String itemCreate(HttpServletRequest request,ItemRegisterForm itemRegisterForm){
 
-        Item item=new Item();
+        Item item = new Item();
         item.setItemName(itemRegisterForm.getItemName());
         item.setItemCount(itemRegisterForm.getItemCount());
         itemService.saveItem(item);

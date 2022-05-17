@@ -24,6 +24,7 @@ public class ReservationService {
     //사용자 대여 리스트
     public List<Reservation> reservationList(){return reservationRepository.findAll();}
 
+
     //사용자 대여 조회
     public List<Reservation> reservationFindByUser(User user){
         return reservationRepository.reservationFind(user);

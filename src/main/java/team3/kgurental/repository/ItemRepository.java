@@ -6,5 +6,4 @@ import team3.kgurental.model.entity.Item;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
-
 }
