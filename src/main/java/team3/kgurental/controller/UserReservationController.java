@@ -47,7 +47,7 @@ public class UserReservationController {
         model.addAttribute("date", date );
         model.addAttribute("items",items);
 
-        return "reservationForm";
+        return "items_select";
     }
 
     @PostMapping("/reservation")

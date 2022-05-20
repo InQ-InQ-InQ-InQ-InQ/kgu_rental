@@ -21,11 +21,12 @@
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
+                    <li class="nav-item"><a class="nav-link" th:if="${session.loginUser != null}" href="/selectDate">Reserve</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login" th:if="${session.loginUser == null}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/users/new" th:if="${session.loginUser == null}">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout" th:if="${session.loginUser != null}" id="logout">Logout</a></li>
+                    <!--로그인 시에만 나오게 구현하기-->
+                    <li class="nav-item"><a class="nav-link" href="/mypage" th:if="${session.loginUser != null}" >MyPage</a></li>
                 </ul>
             </div>
         </div>
@@ -50,9 +51,10 @@
                 <section class="col">
                     <div class="container px-4">
                         <div class="row gx-4 justify-content-center m-auto">
+                            <form class="needs-validation" th:object="${itemRegisterForm}" method="post" action="/register" novalidate>
+
                             <div class="row position-static d-block">
                                 <h4 class="mb-3 text-center">물품 추가</h4>
-                                <form class="needs-validation" th:object="${itemRegisterForm}" method="post" action="/register" novalidate>
                                     <div class="row g-3">
                                         <div class="col-md-6 offset-md-3">
                                             <label for="item_name" class="form-label">물품 이름</label>
@@ -70,8 +72,9 @@
                                                 value="" required>
                                         </div>
                                     </div>
-                                </form>
+
                             </div>
+
                             <div class="row">
                                 <hr class="my-4 col-md-6 offset-md-3">
                             </div>
@@ -79,6 +82,7 @@
                                 <button class="btn btn-outline-primary btn-lg col-md-6 offset-md-3" type="submit"
                                     id="item_create">추가</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </section>

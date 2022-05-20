@@ -18,11 +18,12 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                        <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mypage.html">MyPage</a></li>
+                        <li class="nav-item"><a class="nav-link" th:if="${session.loginUser != null}" href="/selectDate">Reserve</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login" th:if="${session.loginUser == null}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/users/new" th:if="${session.loginUser == null}">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout" th:if="${session.loginUser != null}" id="logout">Logout</a></li>
+                        <!--로그인 시에만 나오게 구현하기-->
+                        <li class="nav-item"><a class="nav-link" href="/mypage" th:if="${session.loginUser != null}" >MyPage</a></li>
                     </ul>
                 </div>
             </div>
@@ -87,7 +88,7 @@
                                                     <td><span th:text="${list.getUser().getName()}"></span></td>
                                                     <td><span th:text="${list.getUser().getUserPhoneNumber()}"></span></td>
                                                     <!--취소버튼 작동 확인 필요-->
-                                                    <td><button type="button" class="btn btn-outline-primary ml-2" aria-label="Close" th:onclick="reservationDelete">예약 취소</button></td>
+                                                    <td><button type="button" class="btn btn-outline-primary ml-2" aria-label="Close" th:onclick="|location.href='@{/reservationDelete}'|" >예약 취소</button></td>
                                                 </tr>
 
                                             </tbody>

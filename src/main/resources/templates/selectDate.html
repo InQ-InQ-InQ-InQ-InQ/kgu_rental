@@ -19,11 +19,12 @@
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
+                    <li class="nav-item"><a class="nav-link" th:if="${session.loginUser != null}" href="/selectDate">Reserve</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login" th:if="${session.loginUser == null}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/users/new" th:if="${session.loginUser == null}">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout" th:if="${session.loginUser != null}" id="logout">Logout</a></li>
+                    <!--로그인 시에만 나오게 구현하기-->
+                    <li class="nav-item"><a class="nav-link" href="/mypage" th:if="${session.loginUser != null}" >MyPage</a></li>
                 </ul>
             </div>
         </div>
@@ -46,13 +47,14 @@
                 </div>
             </div>
             <!-- 정보 기입란 -->
-            <div class="col-lg-7">
+
+
+            <form method="post" th:object="${selectDateForm}" class="col-lg-7">
                 <section class="col">
                     <div class="container px-4">
                         <div class="row gx-4 justify-content-center m-auto">
                             <div class="row position-static d-block">
                                 <h4 class="mb-3 text-center">날짜 선택하기</h4>
-                                <form class="needs-validation" novalidate th:object="${selectDateForm}" method="post" action="/selectDate">
                                     <div class="row g-3">
                                         <div class="col-md-6 offset-md-3 mb-3">
                                             <label for="date" class="form-label">날짜</label>
@@ -60,33 +62,21 @@
                                                 required th:field="*{date}">
                                         </div>
                                     </div>
-                                    <div class="row g-3">
-                                        <div class="col-md-6 offset-md-3 mb-1">
-                                            <label for="date" class="form-label">예약자</label>
-                                            <p class="fw-bolder" id="reserve_name" 
-                                                required>홍길동</p>
-                                        </div>
-                                    </div>
-                                    <div class="row g-3">
-                                        <div class="col-md-6 offset-md-3">
-                                            <label for="date" class="form-label">예약자 번호</label>
-                                            <p class="fw-bolder" id="reserve_phoneNumber" value=""
-                                                required>010-1111-2222</p>
-                                        </div>
-                                    </div>
-                                </form>
+
+
+
                             </div>
                             <div class="row">
                                 <hr class="my-4 col-md-6 offset-md-3">
                             </div>
                             <div class="row">
                                 <button class="btn btn-outline-primary btn-lg col-md-6 offset-md-3" type="submit"
-                                    id="item_reserve" onClick="location.href='reservationForm.html'">완료</button>
+                                    id="item_reserve">완료</button>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
+            </form>
         </div>
     </div>
     <!-- Footer -->
