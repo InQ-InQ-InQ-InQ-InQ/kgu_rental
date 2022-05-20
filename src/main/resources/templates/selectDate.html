@@ -46,13 +46,14 @@
                 </div>
             </div>
             <!-- 정보 기입란 -->
-            <div class="col-lg-7">
+
+
+            <form method="post" th:object="${selectDateForm}" class="col-lg-7">
                 <section class="col">
                     <div class="container px-4">
                         <div class="row gx-4 justify-content-center m-auto">
                             <div class="row position-static d-block">
                                 <h4 class="mb-3 text-center">날짜 선택하기</h4>
-                                <form class="needs-validation" novalidate th:object="${selectDateForm}" method="post" action="/selectDate">
                                     <div class="row g-3">
                                         <div class="col-md-6 offset-md-3 mb-3">
                                             <label for="date" class="form-label">날짜</label>
@@ -60,33 +61,21 @@
                                                 required th:field="*{date}">
                                         </div>
                                     </div>
-                                    <div class="row g-3">
-                                        <div class="col-md-6 offset-md-3 mb-1">
-                                            <label for="date" class="form-label">예약자</label>
-                                            <p class="fw-bolder" id="reserve_name" 
-                                                required>홍길동</p>
-                                        </div>
-                                    </div>
-                                    <div class="row g-3">
-                                        <div class="col-md-6 offset-md-3">
-                                            <label for="date" class="form-label">예약자 번호</label>
-                                            <p class="fw-bolder" id="reserve_phoneNumber" value=""
-                                                required>010-1111-2222</p>
-                                        </div>
-                                    </div>
-                                </form>
+
+
+
                             </div>
                             <div class="row">
                                 <hr class="my-4 col-md-6 offset-md-3">
                             </div>
                             <div class="row">
                                 <button class="btn btn-outline-primary btn-lg col-md-6 offset-md-3" type="submit"
-                                    id="item_reserve" onClick="location.href='reservationForm.html'">완료</button>
+                                    id="item_reserve">완료</button>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
+            </form>
         </div>
     </div>
     <!-- Footer -->

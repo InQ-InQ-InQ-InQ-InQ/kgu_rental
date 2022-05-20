@@ -10,202 +10,62 @@
 </head>
 
 <body id="page-top">
-    <!-- Nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container px-4">
-            <a class="navbar-brand" href="./index.html">KGU Rental</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+<!-- Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+        <a class="navbar-brand" href="/">KGU Rental</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
-                </ul>
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#Reserve">Reserve</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/user/new">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="#logout" id="logout">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Mypage">MyPage</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 물품 목록 -->
+<div class="container">
+
+    <form role="form" action="/reservation" method="post">
+        <br>
+        <br>
+        <br>
+        <div class="form-group">
+            <div >
+                <label>선택 날짜 </label>
+                <input type="text" th:name="date" th:value="${date}"  >
             </div>
+            </br>
+            </br>
+            <label for="items">품목</label>
+
+            <select name="itemId" id="items" class="form-control">
+                <option value="">품목</option>
+                <option th:each="item : ${items}"
+                        th:value="${item.getId()}"
+                        th:text="|물품: ${item.getItemName()} , 남은 수량: ${item.getItemCount()}개|" />
+            </select>
         </div>
-    </nav>
-    <!-- 물품 목록 -->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5">
-            <div class="container px-lg-3 my-5">
-                <h1 class="fw-normal text-start">물품 선택</h1>
-        </div>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- 이용가능 / 이용불가 -->
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <!-- 물품 이미지 -->
-                        <img class="card-img-top image-fluid" src="https://via.placeholder.com/150" alt="..."
-                            style="height: 50%;" />
-                        <!-- 물품 세부사항 -->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- 물품명 -->
-                                <h5 class="fw-bolder">보조배터리</h5>
-                                <!-- 물품 개수 -->
-                            </div>
-                        </div>
-                        <!-- 예약하기 -->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">
-                            예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">충전기</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">공학용 계산기</h5>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">실험복</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">축구공</h5>
-                                <span class="text-muted text-decoration-line-through"></span>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">풋살공</h5>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">농구공</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <span class="text-muted text-decoration-line-through"></span>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">예약
-                            가능</div>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="..." style="height: 50%;" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">헤어 드라이기</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">예약하기</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="py-5 bg-light">
-        <div class="container px-4">
-            <p class="mb-5 fs-6 fw-lighter fst-italic text-center">Copyright &copy; kgu rental 2022</p>
-        </div>
-    </footer>
-    <!-- Bootstrap core JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS -->
-    <script src="#"></script>
+        <button type="submit" class="btn btn-primary">완료</button>
+    </form>
+    <br/>
+
+</div> <!-- /container -->
+<!-- Footer -->
+<footer class="py-5 bg-light">
+    <div class="container px-4">
+        <p class="mb-5 fs-6 fw-lighter fst-italic text-center">Copyright &copy; kgu rental 2022</p>
+    </div>
+</footer>
+<!-- Bootstrap core JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS -->
+<script src="#"></script>
 </body>
 
 </html>
