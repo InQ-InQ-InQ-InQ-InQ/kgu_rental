@@ -88,7 +88,7 @@
                                                     <td><span th:text="${list.getUser().getName()}"></span></td>
                                                     <td><span th:text="${list.getUser().getUserPhoneNumber()}"></span></td>
                                                     <!--취소버튼 작동 확인 필요-->
-                                                    <td><button type="button" class="btn btn-outline-primary ml-2" aria-label="Close" th:onclick="reservationDelete">예약 취소</button></td>
+                                                    <td><button type="button" class="btn btn-outline-primary ml-2" aria-label="Close" th:onclick="|location.href='@{/reservationDelete}'|" >예약 취소</button></td>
                                                 </tr>
 
                                             </tbody>
