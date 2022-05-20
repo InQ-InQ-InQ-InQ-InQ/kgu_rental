@@ -3,9 +3,7 @@ package team3.kgurental.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import team3.kgurental.model.entity.Item;
 import team3.kgurental.model.entity.Reservation;
@@ -27,23 +25,26 @@ public class AdminController {
     public String home(HttpServletRequest request){
         HttpSession session =request.getSession(false);
 
-        return "/adminPage";
+        return "adminPage";
     }
 
     private final ItemService itemService;
 
-    @GetMapping("/adminPage/Item")
-    public String itemDeleteGET(Model model){
-        model.addAttribute("itemDeleteForm", new ItemDeleteForm());
-        return "DeleteForm";
+    @GetMapping("/adminPage")
+    public String items(Model model){
+        List<Item> items = itemService.allItemView();
+        model.addAttribute("items",items);
+        return "/adminPage";
     }
 
-    @PostMapping("/adminPage/Item/itemDelete")
-    public String itemDeletePOST (HttpServletRequest request,ItemDeleteForm itemDeleteForm){
-        Item item = new Item();
-        itemService.itemDelete(item.getId());
-        return "redirect:/admin";
+
+    @PostMapping("/adminPage/{itemId}/itemDelete")
+    public String itemDelete (@PathVariable("itemId") Long itemId){
+        itemService.itemDelete(itemId);
+        return "redirect:.adminPage";
     }
+
+
 
     private final ReservationService reservationService;
 
@@ -54,6 +55,8 @@ public class AdminController {
         model.addAttribute("reservations",reservations);
         return "reservationList";
     }
+
+
 
 
 }

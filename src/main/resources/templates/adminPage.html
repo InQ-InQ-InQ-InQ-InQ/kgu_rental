@@ -104,17 +104,15 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="odd">
+                                                <tr class="odd" th:each=" Item : ${items}">
                                                     <td class="sorting_1">1</td>
-                                                    <td>아이폰 충전기</td>
-                                                    <td>10</td>
-                                                    <td>7일</td>
+                                                    <td><span th:text="${Item.getItemName()}"></span></td>
+                                                    <td><span th:text="${Item.getItemCount()}"></span></td>
+                                                    <td><span th:text="${Item.getReservation()}"></span></td>
                                                     <td>
-                                                        <form method="" action="">
-                                                            <!--삭제버튼 동작 확인-->
-                                                            <button type="submit" class="btn btn-outline-danger ml-2"
-                                                                aria-label="Close" th:onclick="ItemDeleteFormForm">삭제</button>
-                                                        </form>
+                                                        <a
+                                                           th:href="'javascript:itemDelete('+${Item.getId()}+')'"
+                                                           class="btn btn-danger">삭제</a>
                                                     </td>
                                                 </tr>
                                                 <tr class="even">
@@ -176,6 +174,15 @@
             <p class="mb-5 fs-6 fw-lighter fst-italic text-center">Copyright &copy; kgu rental 2022</p>
         </div>
     </footer>
+    <script>
+        function itemDelete(id) {
+            var form = document.createElement("form");
+            form.setAttribute("method", "post");
+            form.setAttribute("action", "/adminPage/" + id + "/itemDelete");
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
     <!-- Bootstrap core JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/admin.item.js"></script>

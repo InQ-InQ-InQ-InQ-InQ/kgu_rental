@@ -20,10 +20,4 @@ public class ItemService {
 
     public void itemDelete(Long Id) {itemRepository.deleteById(Id);}
 
-    //아이템 개수 수정
-    public void itemCountModify(Item item, Long Id) {
-        Item update = itemRepository.findById(Id)
-                .orElseThrow(() -> new RuntimeException());
-        update.setItemCount(item.getItemCount());
-    }
 }
