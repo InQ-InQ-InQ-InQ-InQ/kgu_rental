@@ -68,7 +68,7 @@ public class UserReservationController {
         }
 
         Reservation reservation=new Reservation();
-        reservation.setReservationDate(date+", 18시 까지");
+        reservation.setReservationDate(date+", 18시");
         reservation.setUser(loginUser);
         reservation.setItem(reservationItem);
 

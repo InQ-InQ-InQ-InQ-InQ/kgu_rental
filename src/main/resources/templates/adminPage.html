@@ -44,11 +44,14 @@
                         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="./items_select_date.html">Reserve</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
-                            <li class="nav-item"><a class="nav-link" href="logout.html" id="logout">Logout</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./mypage.html">MyPage</a></li>
+                            <li class="nav-item"><a class="nav-link" th:if="${session.loginUser != null && session.loginUser !='admin'}" href="/selectDate">Reserve</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/login" th:if="${session.loginUser == null}">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/users/new" th:if="${session.loginUser == null}">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout" th:if="${session.loginUser != null}" id="logout">Logout</a></li>
+                            <!--로그인 시에만 나오게 구현하기-->
+                            <li class="nav-item"><a class="nav-link" href="/mypage" th:if="${session.loginUser != null && session.loginUser !='admin'}" >MyPage</a></li>
+                            <!--로그인 시에만 나오게 구현하기-->
+
                         </ul>
                     </div>
                 </div>
@@ -109,7 +112,7 @@
                                                     <td class="sorting_1"><span th:text="${Item.getId()}"></span></td>
                                                     <td><span th:text="${Item.getItemName()}"></span></td>
                                                     <td><span th:text="${Item.getItemCount()}"></span></td>
-                                                    <td><span th:text="${Item.getReservation()}"></span></td>
+                                                    <td><span th:text="${'7일'}"></span></td>
                                                     <td>
                                                         <a
                                                            th:href="'javascript:itemDelete('+${Item.getId()}+')'"
