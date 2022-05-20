@@ -66,7 +66,7 @@
                         <div class="">
                             <h6 class="m-0 font-weight-bold text-primary d-inline-block">전체 물품</h6>
 
-                            <button class="btn btn-outline-primary float-right" onClick="location.href='registerForm.html'"><a href="/register">물품
+                            <button class="btn btn-outline-primary float-right" onClick="location.href='/register'"><a href="/register">물품
                                     생성</a></button>
                         </div>
                     </div>
@@ -110,10 +110,10 @@
                                                     <td>10</td>
                                                     <td>7일</td>
                                                     <td>
-                                                        <form method="" action="">
+                                                        <form method="" action="/adminPage/Item/itemDelete">
                                                             <!--삭제버튼 동작 확인-->
                                                             <button type="submit" class="btn btn-outline-danger ml-2"
-                                                                aria-label="Close" th:onclick="ItemDeleteFormForm">삭제</button>
+                                                                aria-label="Close">삭제</button>
                                                         </form>
                                                     </td>
                                                 </tr>

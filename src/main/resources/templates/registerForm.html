@@ -50,9 +50,10 @@
                 <section class="col">
                     <div class="container px-4">
                         <div class="row gx-4 justify-content-center m-auto">
+                            <form class="needs-validation" th:object="${itemRegisterForm}" method="post" action="/register" novalidate>
+
                             <div class="row position-static d-block">
                                 <h4 class="mb-3 text-center">물품 추가</h4>
-                                <form class="needs-validation" th:object="${itemRegisterForm}" method="post" action="/register" novalidate>
                                     <div class="row g-3">
                                         <div class="col-md-6 offset-md-3">
                                             <label for="item_name" class="form-label">물품 이름</label>
@@ -70,8 +71,9 @@
                                                 value="" required>
                                         </div>
                                     </div>
-                                </form>
+
                             </div>
+
                             <div class="row">
                                 <hr class="my-4 col-md-6 offset-md-3">
                             </div>
@@ -79,6 +81,7 @@
                                 <button class="btn btn-outline-primary btn-lg col-md-6 offset-md-3" type="submit"
                                     id="item_create">추가</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </section>
