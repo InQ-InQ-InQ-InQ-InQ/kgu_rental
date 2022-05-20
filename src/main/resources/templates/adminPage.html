@@ -104,8 +104,9 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+
                                                 <tr class="odd" th:each=" Item : ${items}">
-                                                    <td class="sorting_1">1</td>
+                                                    <td class="sorting_1"><span th:text="${Item.getId()}"></span></td>
                                                     <td><span th:text="${Item.getItemName()}"></span></td>
                                                     <td><span th:text="${Item.getItemCount()}"></span></td>
                                                     <td><span th:text="${Item.getReservation()}"></span></td>
@@ -115,48 +116,7 @@
                                                            class="btn btn-danger">삭제</a>
                                                     </td>
                                                 </tr>
-                                                <tr class="even">
-                                                    <td class="sorting_1">2</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="odd">
-                                                    <td class="sorting_1">3</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="even">
-                                                    <td class="sorting_1">4</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="odd">
-                                                    <td class="sorting_1">5</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="even">
-                                                    <td class="sorting_1">6</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="odd">
-                                                    <td class="sorting_1">7</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
                                     </div>

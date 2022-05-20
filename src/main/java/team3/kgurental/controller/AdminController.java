@@ -41,7 +41,7 @@ public class AdminController {
     @PostMapping("/adminPage/{itemId}/itemDelete")
     public String itemDelete (@PathVariable("itemId") Long itemId){
         itemService.itemDelete(itemId);
-        return "redirect:.adminPage";
+        return "redirect:/adminPage";
     }
 
 
