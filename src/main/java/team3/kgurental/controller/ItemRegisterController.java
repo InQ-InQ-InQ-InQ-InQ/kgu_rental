@@ -31,6 +31,6 @@ public class ItemRegisterController {
         itemService.saveItem(item);
 
 
-        return "redirect:/";
+        return "adminPage";
     }
 }

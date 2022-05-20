@@ -20,17 +20,6 @@ public class HomeController {
     public String home(HttpServletRequest request, Model model){
         HttpSession session =request.getSession(false);
 
-        if(session==null) {
-            return "index";
-        }
-
-        User loginUser=(User)session.getAttribute(SessionConstants.LOGIN_USER);
-
-        if(loginUser==null){
-            return "index";
-        }
-
-        model.addAttribute("user",loginUser);
 
         return "index";
     }
