@@ -14,10 +14,9 @@
 **Client(Web)**
   - <img src="https://img.shields.io/badge/Html-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
   - <img src="https://img.shields.io/badge/Css-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
-  - <img src="https://img.shields.io/badge/Java Script-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
-
+  - <img src="https://img.shields.io/badge/Java Script-1572B6?style=flat-square&logo=JavaScript&logoColor=white">
 **Server**
-  - <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white">
+  - <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white"/>
   - <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&logo=Thymeleaf&logoColor=white"/>
   - <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"/>, <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/>
   - jpa, Spring Data Jpa
