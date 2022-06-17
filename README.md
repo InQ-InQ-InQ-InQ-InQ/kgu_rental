@@ -12,7 +12,7 @@
 ## Tech Stack
 
 **Client(Web)**
-  - Html
+  - <img src="https://img.shields.io/badge/Html-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
   - Css  
   - Java Script
 
