@@ -18,10 +18,10 @@
 
 **Server**
   - Java
-  - Thymeleaf
-  - Spring, Spring Boot
+  - <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&logo=Thymeleaf&logoColor=white"/>
+  - <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"/>, <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/>
   - jpa, Spring Data Jpa
-  - Mysql
+  - <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
 
 ## Features(기능 예시 적은것, 수정하면 됨)
 - 일기 CRUD
