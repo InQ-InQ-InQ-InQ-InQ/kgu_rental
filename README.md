@@ -13,8 +13,8 @@
 
 **Client(Web)**
   - <img src="https://img.shields.io/badge/Html-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
-  - Css  
-  - Java Script
+  - <img src="https://img.shields.io/badge/Css-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
+  - <img src="https://img.shields.io/badge/Java Script-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 
 **Server**
   - Java
