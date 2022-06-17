@@ -22,7 +22,7 @@
   - jpa, Spring Data Jpa
   - <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
 
-## Features(기능 예시 적은것, 수정하면 됨)
+## Features
 
 * 물품 대여
     *  날짜 선택 :calendar:
