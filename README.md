@@ -56,4 +56,8 @@
 
 ## Demo and Screenshots
 
+![회원가입로그인_1](https://user-images.githubusercontent.com/70882924/174658737-90ec32cd-f3a7-4a18-8048-c3d494ecd930.gif)
+![관리자페이지-물품생성](https://user-images.githubusercontent.com/70882924/174658749-486d7e7c-78e7-47d5-bf35-1a61e44cc063.gif)
+![대여및정보확인](https://user-images.githubusercontent.com/70882924/174658752-7743f474-f749-461b-a8f5-9826fb979bdc.gif)
+
 ## Environment Variables
