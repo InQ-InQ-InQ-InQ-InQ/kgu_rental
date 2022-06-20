@@ -3,7 +3,7 @@
 
 ## BackEnd
 - [@yumyeonghan (유명한)](https://github.com/yumyeonghan)
--
+- [@akman12914  (성유진)](https://github.com/akman12914)
 - 
 ## FrontEnd
 - [@holyPigeon (정재우)](https://github.com/holyPigeon)
