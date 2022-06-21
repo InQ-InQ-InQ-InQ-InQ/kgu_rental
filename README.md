@@ -63,6 +63,7 @@
 ## Environment Variables
 
 이 프로젝트 중 데이터베이스를 연동하기 위해서는 application-3team.properties 파일을 추가해야 합니다.
+환경에 따라 username과 password의 값은 변동될 수 있습니다.
 
 ```
 # properties
