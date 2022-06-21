@@ -62,4 +62,15 @@
 
 ## Environment Variables
 
+이 프로젝트 중 데이터베이스를 연동하기 위해서는 application-3team.properties 파일을 추가해야 합니다.
 
+```
+# properties
+spring.datasource.url=jdbc:mysql://localhost:3306/kgu_rental?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+?
+# db response name
+spring.datasource.username=root
+?
+# db response password
+spring.datasource.password=1234
+```
