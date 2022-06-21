@@ -4,7 +4,7 @@
 ## BackEnd
 - [@yumyeonghan (유명한)](https://github.com/yumyeonghan)
 - [@akman12914  (성유진)](https://github.com/akman12914)
-- 
+- [@hyeonjeong519  (황현정)](https://github.com/hyeonjoeng519)
 ## FrontEnd
 - [@holyPigeon (정재우)](https://github.com/holyPigeon)
 - [@ongsim0629 (신수빈)](https://github.com/ongsim0629)
@@ -61,3 +61,5 @@
 ![대여및정보확인](https://user-images.githubusercontent.com/70882924/174658752-7743f474-f749-461b-a8f5-9826fb979bdc.gif)
 
 ## Environment Variables
+
+
