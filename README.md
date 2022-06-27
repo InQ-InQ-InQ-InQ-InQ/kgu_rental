@@ -73,5 +73,5 @@ spring.datasource.url=jdbc:mysql://localhost:3306/kgu_rental?useSSL=false&useUni
 spring.datasource.username=계정 아이디
 
 # db response password
-spring.datasource.password=계정 
+spring.datasource.password=계정 비밀번호
 ```
