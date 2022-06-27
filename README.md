@@ -68,10 +68,10 @@
 ```
 # properties
 spring.datasource.url=jdbc:mysql://localhost:3306/kgu_rental?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
-?
+
 # db response name
-spring.datasource.username=root
-?
+spring.datasource.username=계정 아이디
+
 # db response password
-spring.datasource.password=1234
+spring.datasource.password=계정 
 ```
